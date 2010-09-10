@@ -1,6 +1,60 @@
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
 body {
-  margin: 0;
-  padding: 0;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**end reset**/
+
+
+body {
   background-color: #663939;
 }
 
@@ -9,7 +63,7 @@ hr {
   height: 1px;
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: 1px 0;
 }
 
 
@@ -20,26 +74,392 @@ hr {
 }
 
 #header {
-  width: 1020px;
+  width: 1000px;
   height: 125px;
   margin: 0 auto;
   background: transparent url('imgs/fnds.spr.png') no-repeat left top;
 }
+#header img.logo{
+	margin:27px 0 0 7px ;
+}
+#header div#description{
+  float: right;
+}
+#header div#description h1{
+	color: white;
+	font:bold 14px/20px georgia, serif;
+	text-align: right;
+	}
+#header div#description h2{
+	color:white;
+	font:normal 13px/20px georgia, serif;
+	text-align: right;
+	}
+#header div#description h3{
+	color:#ff9900;
+	font:bold 22px/30px 'Trade Gothic LT Std', arial;
+	text-align: right;
+	}
 
-
+#header ul{
+	float:right;
+	}
+	#header ul li{
+		float:left;
+		margin: 0 6px;
+		}
+		#header ul li a{
+		    color:white;
+			font: bold 16px 'Trade Gothic LT Std', arial;
+			text-decoration:none;
+	        }
+	        #header ul li a:hover{text-decoration:underline;}
 #wrapper-content {
+  background: #f6f5c3 url('imgs/bg-wrapper-content.png') repeat-x bottom;
   width: 100%;
-  height: 800px;
+
+}
+#inner-wrapper{
+  margin: 0 auto;
+  position:relative;
+  width: 1000px;
+}
+#content {width: 622px;}
+#content .border-benefits{
+    background: #673b15 url('imgs/bg-border-benefits.png') repeat-x bottom;
+    border: 1px solid #000;
+    border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+	box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;	
+	width: 610px; height: 391px;
+	margin: 3px 0;
+	padding: 1px 
+	}
+#content #benefits{
+	background: #673b15 url('imgs/bg-benefits.png') repeat-x bottom;
+	/*border: 1px solid #121212;*/
+	border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+	position:relative;
+	width: 610px; height: 391px 
+	}
+	#content #benefits img{ margin: 7px 8px}
+	#content #benefits div.plus{
+		background: transparent url('imgs/bg-70opacity.png') repeat;
+		position:absolute;
+		top: 7px; left: 23px;
+		width:148px; height:172px;
+		}
+		#content #benefits div.plus img{
+		    position:absolute;
+		    left:16px; top:139px;
+		    margin: 0;
+			}
+		#content #benefits div.plus h1{
+		font: bold 14px  'Trade Gothic LT Std',arial;
+		color:white;
+		margin:43px 16px 0;
+		}
+		#content #benefits div.plus h2{
+			font: bold 30px/30px  'Trade Gothic LT Std',arial;
+			color:#ff6600;
+			margin:0 0 0 16px;
+			}
+			#content #benefits div.plus h2 span{font-size:20px}
+		#content #benefits div.plus h3{
+			font: bold 28px/28px 'Trade Gothic LT Std',arial;
+			color:white;
+			margin:0 0 0 16px;
+			float:left;
+			}
+			#content #benefits div.plus h5{
+				font: normal 12px/12px georgia, serif;
+			color:white;
+			
+				}
+		#content #benefits div.plus h4{
+			font: bold 10px/10px  'Trade Gothic LT Std',arial;
+			color:white;
+			margin:0 0 0 16px;
+			clear:left;
+			}
+	#content #benefits div.p2{left: 180px;height:192px;}
+	#content #benefits div.p3{left: 338px;height:222px;}
+	#content #benefits div.credit{
+		background: transparent url('imgs/bg-72opacity.png') repeat;
+		font: bold 17px/18px  'Trade Gothic LT Std',arial;
+		position:absolute;
+		bottom: 21px; left: 20px;
+		width:562px; height:37px;
+		padding: 9px 6px;
+		}
+		#content #benefits div.credit h1{
+		    
+			color: #ff6600;
+		}
+		#content #benefits div.credit a{ 
+			text-decoration:none;
+			color: #FFF;
+	    }
+
+      .border-technical{
+         background: #673b15 url('imgs/bg-border-technical.png') repeat-x bottom;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:610px; height: 371px
+      }
+
+      #content #technical{
+        background: #673b15 url('imgs/bg-technical.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 15px 22px;
+        position:relative;
+        width: 566px; height: 341px;
+
+        }
+        .corner{
+           background: transparent url('imgs/corner.png') repeat-x bottom;
+           width: 85px; height: 65px;
+           position:absolute;
+           bottom: -3px; left: -3px;
+
+}
+  #content #technical h1{
+    font: bold 22px/22px georgia, serif;
+    text-align: center;
+    margin-bottom:13px;
+  }
+  #content #technical img{
+    margin:0px 0px 32px 0px;
+  }
+  #content #technical p{
+    font: normal 14px/20px georgia, serif;
+    margin:0px 20px 0px 48px;
+  }
+
+   .border-message{
+         background: #673b15 url('imgs/bg-border-message.png') repeat-x bottom;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:610px; height: 135px;
+         margin: 25px 0;
+      }
+
+      #content #message{
+        background: #673b15 url('imgs/bg-message.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 11px 13px;
+        position:relative;
+        width: 584px; height: 113px;
+
+        }
+        #content #message img{
+          float:left;
+          border: 1px solid #4d2c10;
+}
+#content #message img.satisfaction{
+  position:absolute;
+  top: -8px; right: -10px;
+  border:none;
+}
+#content #message h1{
+    font: bold 22px/22px georgia, serif;
+    margin-bottom:13px;
+  }
+#content #message p{
+    font: oblique normal 14px/20px georgia, serif;
+    margin: 0 70px 0 80px;
+}
+#content #message .signature{
+float:right;
+margin-top: -8px;
+}
+#content #message .signature p{
+font: oblique normal 12px/14px georgia, serif;
+}
+#content a.download{
+     background: transparent url('imgs/bg-download.png') no-repeat;
+     border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px;
+     box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+     color: black;
+     font: bold 20px/42px  'Trade Gothic LT Std',arial;
+     display: block;
+     text-align: center;
+     text-decoration: none;
+     margin: 19px 0 21px;
+     width:614px; height: 39px;
+}
+#content a.download;hover{text-decoration:underline}
+#sidebar {  
+  width: 378px;
+  position:absolute;
+  right: 0; top: 0;
+  }
+  #sidebar div h2 {
+    font: bold 22px/18px georgia, serif;
+    text-align: left;
+    margin: 0px 0 10px 0
+}
+  #sidebar div p {
+    font: normal 12px/20px georgia, serif;
+    text-align: left;
+}  #sidebar div p.second {
+margin-left: 60px
+}
+  .border-company{
+         background: #673b15 url('imgs/bg-border-company.png') repeat-x top;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:350px; height: 207px;
+         margin: 0px 0px 20px 20px;
+      }
+    .border-company  .corner{
+           background: transparent url('imgs/corner2.png') no-repeat bottom;
+           width: 83px; height: 65px;
+           position:absolute;
+           bottom: -3px; left: -3px;
+
+}
+#sidebar #company{ 
+        background: #673b15 url('imgs/bg-company.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 20px 18px;
+        position:relative;
+        width:314px; height: 167px;
+        
 }
 
-#content {
+#sidebar #company h2{ font-size: 16px}
+
+.border-estimate{
+         background: #987a60 url('imgs/bg-border-testimonial.png') repeat-x bottom;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:350px; height: 238px;
+         margin: 0px 0px 20px 20px;
+      }
+#sidebar #estimate{
+        background: #673b15 url('imgs/bg-contact.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 10px 13px;
+        position:relative;
+        width: 324px; height: 218px;}
+
+
+  .border-testimonials{
+         background: #987a60 url('imgs/bg-border-testimonial.png') repeat-x bottom;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:350px; height: 238px;
+         margin: 0px 0px 20px 20px;
+      }
+
+#sidebar #testimonials{
+        background: #673b15 url('imgs/bg-testimonial.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 12px 9px 0;
+        position:relative;
+        width: 332px; height: 226px; }
+#sidebar #testimonials img{
+  border: 1px solid #4e2d11;
 }
 
-#sidebar {
+#sidebar #testimonials .why-bought{
+  position:absolute;
+  left:10px; top: 137px;
+  background: transparent url('imgs/bg-56opacity.png') repeat;
+ width:334px; height:78px;
+}
+#sidebar #testimonials .why-bought a{
+  background: transparent url('imgs/testimonial-go.png') no-repeat 240px 6px;
+  display:block;
+  color:white;
+  text-decoration: none;
+  padding: 16px 180px 16px 12px;
+  font: bold 24px/24px  'Trade Gothic LT Std',arial;
+}
+ .border-questions{
+         background: #673b15 url('imgs/bg-border-questions.png') repeat-x bottom;
+         border: 1px solid #000;
+         border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+         box-shadow: 0px 0px 1px #000;-moz-box-shadow: 0px 0px 1px #000; -webkit-box-shadow: 0px 0px 1px #000;
+         padding: 1px;
+         width:350px; height: 88px;
+         margin: 0px 0px 20px 20px;
+      }
+
+#sidebar #questions{
+        background: #673b15 url('imgs/bg-questions.png') repeat-x bottom;
+        color:white;
+        border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
+        padding: 0px;
+        position:relative;
+        width: 350px; height: 88px;
+}
+#sidebar #questions img{
+  float:left;
+    margin-top:8px;
+}
+#sidebar #questions a{
+  background: transparent url('imgs/question.png') no-repeat 279px 11px;
+  display:block;
+  color:white;
+  text-decoration: none;
+  padding: 16px 78px 16px 75px;
+  font: normal 12px/21px georgia, serif;
+}
+#sidebar #questions a strong{
+  font-weight: bold;
+  font-size: 21px;
+}
+#sidebar #energy{
+        background-color: #b29c67;
+        color:#43280f;
+        padding:25px 10px 12px 40px;
+        position:relative;
+        width: 300px; height: 100px;
+        margin: 30px 0px 20px 20px;
+}
+#sidebar #energy h2{
+   font: normal 23px /23px 'Hand Of Sean';
+   color:#613636
+}
+#sidebar #energy p{
+    font: bold 16px/16px  'Trade Gothic LT Std',arial;
+   
+}
+#sidebar #energy p small{
+    font-size: 13px;
+    line-height: 25px
+
+}
+#sidebar #energy img{
+  float: right
+}
+#sidebar #energy .corner{
+           background: transparent url('imgs/corner3.png') no-repeat bottom;
+           width: 51px; height: 38px;
+           position:absolute;
+           bottom: -1px; left: -1px;
+
 }
 
 
 #wrapper-footer {
+	clear:both;
   width: 100%;
   height: 400px;
   background-color: #392020;
@@ -50,4 +470,38 @@ hr {
   height: 400px;
   margin: 0 auto;
   background: transparent url('imgs/fnds.spr.png') no-repeat 0px -150px;
+}
+#footer img{
+
+  margin: 65px 60px 60px 20px;
+}
+#footer img.last{
+  margin: 65px 0px 60px 50px;
+}
+#footer div#credit-cards{
+ float: right;
+
+}
+#footer div#credit-cards img{
+ margin:0
+
+}
+#footer div#credit-cards p{
+ margin:20px 0;
+  color:#93551e;
+}
+#footer ul li a{
+  font: normal 12px/18px  'Trade Gothic LT Std',arial;
+  color:#93551e;
+  float:left;
+  margin: 5px;
+  text-decoration: none
+}
+#footer ul li a:hover{text-decoration: underline
+}
+#footer p{
+  font: normal 11px/13px  'Trade Gothic LT Std',arial;
+  color:#663939;
+  clear:left;
+  margin: 0 5px;
 }
